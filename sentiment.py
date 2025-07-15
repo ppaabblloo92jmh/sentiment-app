@@ -59,7 +59,7 @@ class SentimentAnalyzer:
         except Exception:
             return []
 
-    def _get_tweets(self, query="Bitcoin OR BTC", max_results=50):
+    def _get_tweets(self, query="Bitcoin OR BTC", max_results=[]):
         if not self.twitter_bearer_token:
             return []
         try:
