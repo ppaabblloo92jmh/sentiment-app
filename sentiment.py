@@ -124,7 +124,7 @@ class SentimentAnalyzer:
     def get_market_sentiment(self):
         try:
             news = self._get_news(max_articles=15)
-            tweets = self._get_tweets(max_results=30)
+            tweets = self._get_tweets(max_results=[])
             if not news and not tweets:
                 return {
                     'sentiment': "Datos insuficientes ⚠️",
